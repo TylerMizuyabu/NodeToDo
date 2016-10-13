@@ -8,7 +8,7 @@ var apiController = require('./controllers/apiController');
 var viewController = require('./controllers/viewController');
 var jade = require('jade');
 
-var conf = require('./config');
+var conf = require('./configuration');
 
 mongoose.connect('mongodb://'+ conf.user +':'+ conf.pass +'@ds053176.mlab.com:53176/nodetodom');
 
