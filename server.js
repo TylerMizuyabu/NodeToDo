@@ -7,7 +7,7 @@ var methodOverride = require('method-override');
 var apiController = require('./controllers/apiController');
 var viewController = require('./controllers/viewController');
 var jade = require('jade');
-
+var http = require('http');
 var conf = require('./configuration');
 
 mongoose.connect('mongodb://'+ conf.user +':'+ conf.pass +'@ds053176.mlab.com:53176/nodetodom');
@@ -22,4 +22,4 @@ app.use(methodOverride());
 apiController(app);
 viewController(app);
 
-app.listen();
+app.listen(443);
