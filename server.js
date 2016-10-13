@@ -12,6 +12,7 @@ var conf = require('./configuration');
 
 mongoose.connect('mongodb://'+ conf.user +':'+ conf.pass +'@ds053176.mlab.com:53176/nodetodom');
 
+app.set('port', (process.env.PORT || 5000));
 app.set('view engine', jade);
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
@@ -22,4 +23,6 @@ app.use(methodOverride());
 apiController(app);
 viewController(app);
 
-app.listen(443);
+app.listen(app.get('port'),function(){
+    console.log('Node is running on port ' + app.get('port'));
+});
