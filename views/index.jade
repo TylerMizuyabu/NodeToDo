@@ -26,9 +26,11 @@ html
             p(class="navbar-text") First MEAN app
           nav(class='collapse navbar-collapse' id='myNavbar')
             ul(class='nav navbar-nav navbar-right')
-              li
+              li(ng-hide="authenticated")
                 a(class="text-right" href="#/register" data-toggle="collapse" data-target="#myNavbar") #[span(class="glyphicon glyphicon-user")] Register
-              li
+              li(ng-hide="authenticated")
                 a(class="text-right" href="#/login" data-toggle="collapse" data-target="#myNavbar") #[span(class="glyphicon glyphicon-log-in")] Login
+              li(ng-show="authenticated")
+                a(class="text-right" href="#/login" data-toggle="collapse" data-target="#myNavbar" ng-click="signout()") #[span(class="glyphicon glyphicon-log-out")] Logout
     div(class="container-fluid")
       div(ng-view)
