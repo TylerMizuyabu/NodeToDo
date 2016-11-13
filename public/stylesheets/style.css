@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 a {
@@ -9,14 +9,13 @@ a {
 
 .jumbotron{
   margin-top:5%;
-  
 }
 
 .counter {
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 10px;
+  padding-right: 10px;
   border:1pt solid #0089FA;
-  border-radius: 20px;
+  border-radius: 15%;
   background-color:#0089FA;
   color: white;
 }
