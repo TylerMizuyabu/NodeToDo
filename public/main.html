@@ -1,0 +1,26 @@
+<body ng-controller="mainController">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="jumbotron text-center">
+            <h1> You have <span class="counter">{{ todos.length }}</span> things to do </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <ul class='list-group'>
+                    <li class='list-group-item todo' ng-repeat="todo in todos">
+                        <div class ="checkbox">
+                            <label> <input type="checkbox" ng-click="delete(todo._id)"> {{todo.text}} </label>
+                        </div>
+                    </li>
+                <ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-sm-8 col-sm-offset-2'>
+                <form ng-submit="create()">
+                    <textarea class="form-control" id="text" ng-model="newTodo.text"></textarea><br>
+                    <input type="submit" value="Create Todo" class="btn btn-primary" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

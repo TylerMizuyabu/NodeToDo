@@ -1,0 +1,21 @@
+html
+  head
+    title=title
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js")
+    script(src="javascripts/todoApp.js")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    link(rel="stylesheet" href="stylesheets/style.css")
+  body(ng-app="todoApp")
+    div(id="main" class="container-fluid")
+      nav(class="navbar-fluid navbar-default navbar-fixed-top")
+          div(class="container")
+            a(class="navbar-brand" href="#") TODO Manager
+            p(class="navbar-text") First MEAN app
+            p(class="navbar-right navbar-text" ng-hide="authenticated")
+              #[a(href="#/login") Login] or #[a(href="#/register") Register]
+            p(class="navbar-right navbar-text" ng-show="authenticated")
+              a(href="#/login" ng-click="signout()") Logout
+    div(class="container-fluid")
+      div(ng-view)

@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.jumbotron{
+  margin-top:5%;
+  
+}
+
+.counter {
+  padding-left: 3%;
+  padding-right: 3%;
+  border:1pt solid #0089FA;
+  border-radius: 20px;
+  background-color:#0089FA;
+  color: white;
+}
+
+
+
+.form-auth {
+  margin-top: 10%;
+}
