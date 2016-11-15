@@ -2,7 +2,7 @@ var router = require('express').Router();
 
 module.exports = function(passport){
 
-    router.user(function(req,res,next){
+    router.use(function(req,res,next){
         res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
 
         // Request methods you wish to allow
