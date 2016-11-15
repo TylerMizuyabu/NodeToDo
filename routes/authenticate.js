@@ -2,6 +2,11 @@ var router = require('express').Router();
 
 module.exports = function(passport){
 
+    router.user(function(req,res,next){
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+        next();
+    });
+
     router.get('/success', function(req,res,next){
         res.send({status:'success', user: req.user ? req.user:null});
     });

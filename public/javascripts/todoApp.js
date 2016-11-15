@@ -86,7 +86,7 @@ app.controller('authController',function($scope,$http,$rootScope,$location){
                 $rootScope.currentUser = data.user._id;
                 $location.path('/');
             }else{
-                $scope.error_message = data.message;
+                $scope.error_message = "Incorrect username or password";
             }
         });
     };
@@ -98,7 +98,7 @@ app.controller('authController',function($scope,$http,$rootScope,$location){
                 $rootScope.currentUser = data.user._id;
                 $location.path('/');
             }else{
-                $scope.error_message = data.message;
+                $scope.error_message = "Username already exists";
             }
         });
     };
