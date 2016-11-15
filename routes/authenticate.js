@@ -19,10 +19,12 @@ module.exports = function(passport){
     });
 
     router.get('/success', function(req,res,next){
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.send({status:'success', user: req.user ? req.user:null});
     });
 
     router.get('/failure', function(req,res,next){
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.send({status:'failure', user:null});
     });
     
